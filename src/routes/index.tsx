@@ -95,14 +95,14 @@ function Home() {
       <Header />
 
       {/* HERO */}
-      <section className="relative min-h-[720px] w-full overflow-hidden">
+      <section className="relative min-h-[640px] w-full overflow-hidden">
         <img
           src={heroImg}
           alt="Essential oil dropper over botanicals"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-        <div className="relative mx-auto flex max-w-7xl flex-col justify-center px-6 pt-40 pb-24 lg:px-10 lg:pt-48 lg:pb-32 min-h-[720px]">
+        <div className="relative mx-auto flex max-w-7xl flex-col justify-center px-6 py-20 lg:px-10 lg:py-28 min-h-[640px]">
           <h1 className="max-w-3xl font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
             India's Leading High-Grade Essential Oils Supplier
           </h1>
