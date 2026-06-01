@@ -138,15 +138,24 @@ function Home() {
 
       {/* WHAT WE OFFER */}
       <Section id="offer" className="bg-[color:var(--cream)]">
-        <h2 className="text-center font-serif text-4xl lg:text-5xl">What We Offer</h2>
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {offerings.map(({ icon: Icon, title, body }) => (
-            <div key={title} className="rounded-lg bg-background p-8 text-center shadow-sm">
-              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center">
-                <Icon className="h-12 w-12 text-primary" strokeWidth={1.5} />
-              </div>
-              <h3 className="font-sans text-lg font-semibold text-foreground">{title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/70">{body}</p>
+        <h2 className="text-center font-serif text-5xl lg:text-6xl text-foreground">What We Offer</h2>
+        <div className="mt-16 grid gap-8 md:grid-cols-3">
+          {offerings.map(({ image, title, body }) => (
+            <div
+              key={title}
+              className="rounded-2xl bg-background/60 p-10 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+            >
+              <img
+                src={image}
+                alt={title}
+                className="h-32 w-auto object-contain"
+              />
+              <h3 className="mt-6 font-sans text-2xl font-bold text-foreground">
+                {title}
+              </h3>
+              <p className="mt-4 text-[15px] leading-relaxed text-foreground/75">
+                {body}
+              </p>
             </div>
           ))}
         </div>
