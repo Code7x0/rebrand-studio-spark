@@ -1,13 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  FlaskConical,
-  Leaf,
-  Cog,
-  Search,
-  HandCoins,
-  Factory,
-  Globe2,
-} from "lucide-react";
+import { Search, HandCoins, Factory, Globe2 } from "lucide-react";
+import offerEssentialOils from "@/assets/offer-essential-oils.png";
+import offerBotanicalExtracts from "@/assets/offer-botanical-extracts.png";
+import offerCustomSolutions from "@/assets/offer-custom-solutions.png";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Section } from "@/components/site/Section";
