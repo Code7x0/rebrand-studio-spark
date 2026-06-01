@@ -55,17 +55,17 @@ function Btn({
 
 const offerings = [
   {
-    icon: FlaskConical,
+    image: offerEssentialOils,
     title: "Essential Oils",
     body: "We offer a wide portfolio of steam-distilled essential oils sourced directly from farmers across India.",
   },
   {
-    icon: Leaf,
+    image: offerBotanicalExtracts,
     title: "Botanical Extracts",
     body: "Our extracts are developed with precision, ensuring retention of active compounds and consistent quality.",
   },
   {
-    icon: Cog,
+    image: offerCustomSolutions,
     title: "Custom Solutions",
     body: "We work closely with clients to develop specific formulations and blends suited to their product needs.",
   },
