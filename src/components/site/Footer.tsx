@@ -1,9 +1,20 @@
+import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Twitter } from "lucide-react";
 
-const cols = [
-  ["About Us", "Our Capabilities"],
-  ["Our Identity", "Certifications"],
-  ["Sustainability", "Contact Us", "Terms & Privacy"],
+const cols: { label: string; href: string }[][] = [
+  [
+    { label: "About Us", href: "/about" },
+    { label: "Our Capabilities", href: "/capabilities" },
+  ],
+  [
+    { label: "Our Identity", href: "/identity" },
+    { label: "Certifications", href: "#" },
+  ],
+  [
+    { label: "Sustainability", href: "#" },
+    { label: "Contact Us", href: "/contact" },
+    { label: "Terms & Privacy", href: "#" },
+  ],
 ];
 
 export function Footer() {
@@ -13,11 +24,17 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
           {cols.map((col, i) => (
             <ul key={i} className="space-y-4">
-              {col.map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-sm hover:opacity-80">
-                    {item}
-                  </a>
+              {col.map(({ label, href }) => (
+                <li key={label}>
+                  {href.startsWith("/") ? (
+                    <Link to={href} className="text-sm hover:opacity-80 transition-opacity">
+                      {label}
+                    </Link>
+                  ) : (
+                    <a href={href} className="text-sm hover:opacity-80 transition-opacity">
+                      {label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

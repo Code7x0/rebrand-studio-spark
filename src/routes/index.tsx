@@ -1,5 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Search, HandCoins, Factory, Globe2 } from "lucide-react";
+import worldMap from "@/assets/world-map.png";
+import iconTraceableSourcing from "@/assets/icon-traceable-sourcing.png";
+import iconReliableManufacturing from "@/assets/icon-reliable-manufacturing.png";
+import iconOptimumPricing from "@/assets/icon-optimum-pricing.png";
+import gearIcon from "@/assets/gear-icon.png";
 import offerEssentialOils from "@/assets/offer-essential-oils.png";
 import offerBotanicalExtracts from "@/assets/offer-botanical-extracts.png";
 import offerCustomSolutions from "@/assets/offer-custom-solutions.png";
@@ -79,9 +83,9 @@ const stats = [
 ];
 
 const reasons = [
-  { icon: Search, title: "Traceable Sourcing", body: "We work directly with cultivators to ensure every raw material meets our sourcing and quality benchmarks." },
-  { icon: HandCoins, title: "Reliable Manufacturing", body: "In-house capabilities for extraction and testing ensure consistency across batches and orders." },
-  { icon: Factory, title: "Optimum Pricing", body: "We focus on value, balancing cost with quality to support your business over the long term." },
+  { icon: iconTraceableSourcing,     title: "Traceable Sourcing",     body: "We work directly with cultivators to ensure every raw material meets our sourcing and quality benchmarks." },
+  { icon: iconOptimumPricing,        title: "Reliable Manufacturing",  body: "In-house capabilities for extraction and testing ensure consistency across batches and orders." },
+  { icon: iconReliableManufacturing, title: "Optimum Pricing",         body: "We focus on value, balancing cost with quality to support your business over the long term." },
 ];
 
 function Home() {
@@ -90,38 +94,38 @@ function Home() {
       <Header />
 
       {/* HERO */}
-      <section className="relative min-h-[640px] w-full overflow-hidden">
+      <section className="relative w-full overflow-hidden bg-background" style={{ height: "65vh", minHeight: "550px", maxHeight: "700px" }}>
         <img
           src={heroImg}
           alt="Essential oil dropper over botanicals"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-[center_40%]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-        <div className="relative mx-auto flex max-w-7xl flex-col justify-center px-6 py-20 lg:px-10 lg:py-28 min-h-[640px]">
-          <h1 className="max-w-3xl font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
+        <div className="relative mx-auto flex h-full max-w-7xl flex-col justify-center px-6 py-12 lg:px-10 lg:py-16">
+          <h1 className="max-w-4xl font-serif text-4xl leading-[1.1] text-white sm:text-5xl lg:text-[4.5rem]">
             India's Leading High-Grade Essential Oils Supplier
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/90">
+          <p className="mt-6 max-w-2xl text-[16px] lg:text-[18px] leading-relaxed text-white/95 font-medium">
             For over three generations, we've helped brands like yours source and
             manufacture essential oils and botanical extracts with the one thing
             that matters most — certainty.
-            <br />
+            <br /><br />
             From farm to finished product, we ensure traceability, consistency,
             and care in every drop.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-10 flex flex-wrap gap-5">
             <Btn variant="primary">Explore Our Products</Btn>
             <Btn variant="ghost">Download Brochure</Btn>
           </div>
         </div>
       </section>
 
-      {/* WHO WE ARE */}
-      <Section id="about" className="bg-background">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div>
-            <h2 className="font-serif text-4xl lg:text-5xl text-foreground">Who We Are</h2>
-            <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-foreground/80">
+      {/* CTA */}
+      <Section id="contact" className="bg-[#f8f6f2]">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.1fr]">
+          <div className="pr-0 lg:pr-8">
+            <h2 className="font-serif text-3xl lg:text-[3.5rem] leading-[1.1] text-foreground">Who We Are</h2>
+            <div className="mt-8 space-y-6 text-[16px] lg:text-[18px] leading-relaxed text-foreground/80 font-medium">
               <p>
                 Laxmi Essential Oils is built on a foundation that spans three generations of learning, refining, and evolving in the world of botanicals and air care. With deep roots in Indian agriculture and a process-driven approach to extraction and delivery, we offer a dependable supply of high-quality ingredients to businesses across wellness, flavour, fragrance, and personal care sectors.
               </p>
@@ -130,8 +134,8 @@ function Home() {
               </p>
             </div>
           </div>
-          <div className="overflow-hidden rounded-lg">
-            <img src={whoImg} alt="Essential oil bottles in the field" className="h-full w-full object-cover" />
+          <div className="overflow-hidden rounded-none shadow-sm">
+            <img src={whoImg} alt="Essential oil bottles in the field" className="h-full w-full object-cover rounded-none" />
           </div>
         </div>
       </Section>
@@ -143,7 +147,7 @@ function Home() {
           {offerings.map(({ image, title, body }) => (
             <div
               key={title}
-              className="rounded-2xl bg-background/60 p-10 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+              className="flex flex-col items-center text-center rounded-2xl bg-background/60 p-10 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
             >
               <img
                 src={image}
@@ -161,8 +165,8 @@ function Home() {
         </div>
       </Section>
 
-      {/* HOW WE WORK */}
-      <section id="capabilities" className="bg-primary text-primary-foreground">
+      {/* PRODUCT RANGE */}
+      <section id="products" className="bg-primary text-primary-foreground py-16 px-6 lg:py-20">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
@@ -176,17 +180,35 @@ function Home() {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-x-10 gap-y-12 self-center">
-              {stats.map((s) => (
-                <div key={s.label}>
-                  <div className="font-serif text-4xl text-[color:var(--gold)] lg:text-5xl">
-                    {s.value}
+            <div className="relative self-center overflow-hidden rounded-3xl p-2">
+              {/* Gear icon decorative background — centred behind all 4 cards */}
+              <img
+                src={gearIcon}
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] h-[115%] object-contain select-none"
+              />
+              <div className="relative grid grid-cols-2 gap-3">
+                {stats.map((s) => (
+                  <div
+                    key={s.label}
+                    className="flex flex-col items-center justify-center rounded-2xl px-10 py-10 text-center"
+                    style={{
+                      background: "rgba(255,255,255,0.09)",
+                      border: "1px solid rgba(255,255,255,0.14)",
+                      minWidth: "170px",
+                      minHeight: "148px",
+                    }}
+                  >
+                    <div className="font-serif text-4xl text-[color:var(--gold)] lg:text-5xl font-normal">
+                      {s.value}
+                    </div>
+                    <div className="mt-3 text-[10px] font-bold uppercase tracking-[0.18em] text-primary-foreground/70">
+                      {s.label}
+                    </div>
                   </div>
-                  <div className="mt-2 text-xs font-semibold uppercase tracking-widest text-primary-foreground/80">
-                    {s.label}
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -194,13 +216,13 @@ function Home() {
 
       {/* GCMS */}
       <Section className="bg-[color:var(--cream)]">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div className="overflow-hidden rounded-lg">
-            <img src={gcmsImg} alt="Lab testing" className="h-full w-full object-cover" />
+        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
+          <div className="overflow-hidden rounded-none shadow-sm">
+            <img src={gcmsImg} alt="Lab testing" className="h-full w-full object-cover rounded-none" />
           </div>
-          <div>
-            <h2 className="font-serif text-4xl lg:text-5xl">GCMS and GLC testing</h2>
-            <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-foreground/80">
+          <div className="pl-0 lg:pl-8">
+            <h2 className="font-serif text-3xl lg:text-[3.5rem] leading-[1.1]">GCMS and GLC testing</h2>
+            <div className="mt-8 space-y-6 text-[16px] lg:text-[18px] leading-relaxed text-foreground/80 font-medium">
               <p>
                 At Laxmi Essential Oils & Oleoresins, we use advanced Gas Chromatography (GLC) and Gas Chromatography–Mass Spectrometry (GC-MS) in-house to ensure the purity, safety, and consistency of every essential oil, solvent extract, and CO₂ extract we produce.
               </p>
@@ -215,7 +237,7 @@ function Home() {
         </div>
       </Section>
 
-      {/* INDUSTRIES */}
+      {/* SUSTAINABLE & RESPONSIBLE BUSINESS */}
       <Section className="bg-background">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
@@ -239,12 +261,12 @@ function Home() {
       <Section className="bg-[color:var(--cream)]">
         <h2 className="text-center font-serif text-4xl lg:text-5xl">Why Choose Us</h2>
         <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {reasons.map(({ icon: Icon, title, body }) => (
-            <div key={title} className="rounded-lg bg-background p-8 text-center shadow-sm">
-              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center">
-                <Icon className="h-12 w-12 text-primary" strokeWidth={1.5} />
+          {reasons.map(({ icon, title, body }) => (
+            <div key={title} className="flex flex-col items-center rounded-2xl bg-background p-10 text-center shadow-sm">
+              <div className="mb-8 flex h-[110px] w-[110px] items-center justify-center">
+                <img src={icon} alt={title} className="h-full w-full object-contain" />
               </div>
-              <h3 className="font-sans text-lg font-semibold text-foreground">{title}</h3>
+              <h3 className="font-sans text-xl font-bold text-foreground">{title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-foreground/70">{body}</p>
             </div>
           ))}
@@ -254,8 +276,12 @@ function Home() {
       {/* GLOBAL REACH */}
       <Section id="identity" className="bg-background">
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div className="flex justify-center">
-            <Globe2 className="h-72 w-72 text-primary/80" strokeWidth={0.6} />
+          <div className="flex items-center justify-center">
+            <img
+              src={worldMap}
+              alt="World map showing global reach"
+              className="w-full max-w-[560px] object-contain"
+            />
           </div>
           <div>
             <h2 className="font-serif text-4xl lg:text-5xl">Global Reach and Certifications</h2>

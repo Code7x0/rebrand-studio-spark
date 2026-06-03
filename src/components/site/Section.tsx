@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export function Section({
@@ -11,10 +12,17 @@ export function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className={cn("w-full", className)}>
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
+    <motion.section
+      id={id}
+      className={cn("w-full py-12 lg:py-16", className)}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
         {children}
       </div>
-    </section>
+    </motion.section>
   );
 }
