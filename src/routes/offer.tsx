@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 import heroBg from "@/assets/what we offer.png";
+import brochurePdf from "@/assets/brochure.pdf";
 import imgEssentialOils from "@/assets/Container.png";
 import imgBotanicalExtracts from "@/assets/Container (1).png";
 import imgCustom1 from "@/assets/offer-custom-1.png";
@@ -35,10 +36,14 @@ function Btn({
   children,
   variant = "primary",
   href = "#",
+  target,
+  download,
 }: {
   children: React.ReactNode;
   variant?: "primary" | "ghost";
   href?: string;
+  target?: string;
+  download?: string;
 }) {
   const base =
     "inline-flex items-center justify-center rounded-md px-7 py-3.5 text-[14px] font-bold transition-colors";
@@ -47,7 +52,7 @@ function Btn({
       ? "bg-primary text-primary-foreground hover:opacity-90"
       : "border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground";
   return (
-    <a href={href} className={`${base} ${styles}`}>
+    <a href={href} target={target} download={download} className={`${base} ${styles}`}>
       {children}
     </a>
   );
@@ -262,7 +267,12 @@ function Offer() {
             Explore how our oils, extracts, and custom solutions can elevate your formulations and supply chains.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-5">
-            <Btn variant="primary" href="/contact">
+            <Btn
+              variant="primary"
+              href={brochurePdf}
+              target="_blank"
+              download="Laxmi-Essential-Oils-Brochure.pdf"
+            >
               Download Product Brochure
             </Btn>
             <Btn variant="ghost" href="/contact">

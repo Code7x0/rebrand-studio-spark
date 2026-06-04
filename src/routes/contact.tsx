@@ -331,43 +331,31 @@ function Contact() {
           {/* ── Right: Contact Details ── */}
           <div className="flex flex-col gap-6">
 
-            {/* Card 1: Northern Region */}
+            {/* Card 1: Office Address */}
             <div className="rounded-r-xl rounded-l-none bg-black/5 p-8 border-l-[4px] border-primary">
               <div className="text-[10px] font-bold tracking-[0.2em] text-[#8c6b4a] uppercase mb-4">
-                Northern Region
+                Our Office
               </div>
-              <h4 className="text-[19px] font-bold text-primary mb-5">Your Address</h4>
+              <h4 className="text-[19px] font-bold text-primary mb-5">Laxmi Essential Oils</h4>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <MapPin className="mt-0.5 h-[18px] w-[18px] shrink-0 text-[#8c6b4a] fill-[#8c6b4a]" />
-                  <span className="text-[14px] font-medium text-foreground/80">Address</span>
+                  <span className="text-[14px] font-medium text-foreground/80 leading-relaxed">
+                    24/37, Gopal Bhavan, Birhana Road,<br />
+                    Kanpur 208001, U.P., India
+                  </span>
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="h-[18px] w-[18px] shrink-0 text-[#8c6b4a] fill-[#8c6b4a]" />
-                  <span className="text-[14px] font-medium text-foreground/80">number</span>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-[14px] font-medium text-foreground/80">+91 512 3594291</span>
+                    <span className="text-[14px] font-medium text-foreground/80">+91 99363 38162</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Card 2: Southern Region */}
-            <div className="rounded-r-xl rounded-l-none bg-black/5 p-8 border-l-[4px] border-primary">
-              <div className="text-[10px] font-bold tracking-[0.2em] text-[#8c6b4a] uppercase mb-4">
-                Southern Region
-              </div>
-              <h4 className="text-[19px] font-bold text-primary mb-5">Address</h4>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <MapPin className="mt-0.5 h-[18px] w-[18px] shrink-0 text-[#8c6b4a] fill-[#8c6b4a]" />
-                  <span className="text-[14px] font-medium text-foreground/80">addresss</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <Phone className="h-[18px] w-[18px] shrink-0 text-[#8c6b4a] fill-[#8c6b4a]" />
-                  <span className="text-[14px] font-medium text-foreground/80">number</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3: Direct Correspondence */}
+            {/* Card 2: Direct Correspondence */}
             <div className="rounded-xl bg-primary p-8">
               <div className="text-[10px] font-bold tracking-[0.2em] text-white/70 uppercase mb-4">
                 Direct Correspondence

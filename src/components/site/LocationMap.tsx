@@ -12,10 +12,10 @@ import type { Map as LeafletMap } from "leaflet";
 
 // ─── CONFIG — change this when the exact office address is known ──────────────
 const OFFICE_LOCATION = {
-  lat: 26.4499,      // Kanpur, Uttar Pradesh
-  lng: 80.3319,
-  zoom: 12,
-  label: "Kanpur, UP",
+  lat: 26.4640,      // 24/37 Gopal Bhavan, Birhana Road, Kanpur 208001
+  lng: 80.3484,
+  zoom: 17,
+  label: "Birhana Road, Kanpur",
   markerTitle: "Laxmi Essential Oils",
 };
 // ─────────────────────────────────────────────────────────────────────────────
@@ -96,11 +96,11 @@ export function LocationMap() {
       }).addTo(map);
 
       marker.bindPopup(
-        `<div style="font-family:system-ui,sans-serif; padding:4px 2px; min-width:160px">
+        `<div style="font-family:system-ui,sans-serif; padding:4px 2px; min-width:180px">
            <div style="font-weight:700; font-size:14px; color:#1a4731; margin-bottom:4px">
              ${OFFICE_LOCATION.markerTitle}
            </div>
-           <div style="font-size:12px; color:#555">${OFFICE_LOCATION.label}</div>
+           <div style="font-size:12px; color:#555; line-height:1.5">24/37, Gopal Bhavan,<br/>Birhana Road, Kanpur 208001</div>
          </div>`,
         { closeButton: false, offset: [0, -10] }
       );

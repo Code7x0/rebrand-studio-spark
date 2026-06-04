@@ -11,6 +11,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Section } from "@/components/site/Section";
 import heroImg from "@/assets/hero.png";
+import brochurePdf from "@/assets/brochure.pdf";
 import whoImg from "@/assets/who-we-are.png";
 import gcmsImg from "@/assets/gcms.png";
 import industriesImg from "@/assets/industries.png";
@@ -39,10 +40,14 @@ function Btn({
   children,
   variant = "primary",
   href = "#",
+  target,
+  download,
 }: {
   children: React.ReactNode;
   variant?: "primary" | "ghost";
   href?: string;
+  target?: string;
+  download?: string;
 }) {
   const base =
     "inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-medium transition-colors";
@@ -51,7 +56,7 @@ function Btn({
       ? "bg-primary text-primary-foreground hover:opacity-90"
       : "border border-white/80 text-white hover:bg-white/10";
   return (
-    <a href={href} className={`${base} ${styles}`}>
+    <a href={href} target={target} download={download} className={`${base} ${styles}`}>
       {children}
     </a>
   );
@@ -114,8 +119,15 @@ function Home() {
             and care in every drop.
           </p>
           <div className="mt-10 flex flex-wrap gap-5">
-            <Btn variant="primary">Explore Our Products</Btn>
-            <Btn variant="ghost">Download Brochure</Btn>
+            <Btn variant="primary" href="/offer">Explore Our Products</Btn>
+            <Btn
+              variant="ghost"
+              href={brochurePdf}
+              target="_blank"
+              download="Laxmi-Essential-Oils-Brochure.pdf"
+            >
+              Download Brochure
+            </Btn>
           </div>
         </div>
       </section>
