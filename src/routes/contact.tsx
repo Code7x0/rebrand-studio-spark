@@ -140,21 +140,34 @@ function Contact() {
       {/* ── HERO ── */}
       <section
         className="relative w-full overflow-hidden bg-background"
-        style={{ height: "40vh", minHeight: "350px", maxHeight: "450px" }}
+        style={{ height: "55vh", minHeight: "450px", maxHeight: "600px" }}
       >
-        <img
+        <motion.img
           src={heroBg}
-          alt="Hands holding tree roots"
+          alt="Laxmi Essential Oils Headquarters"
           className="absolute inset-0 h-full w-full object-cover object-[center_30%]"
+          initial={{ scale: 1.06 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.4, ease: "easeOut" }}
         />
         <div className="absolute inset-0 bg-black/40" />
-        <div className="relative mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-6 text-center lg:px-10">
-          <h1 className="font-serif text-4xl leading-[1.1] text-white sm:text-5xl lg:text-[4.5rem]">
+        <div className="relative mx-auto flex w-full h-full max-w-7xl flex-col items-center justify-center px-6 text-center lg:px-10">
+          <motion.h1
+            className="font-serif text-[2rem] leading-[1.05] text-white sm:text-5xl lg:text-[4.5rem] lg:leading-[1.1]"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+          >
             Contact Us
-          </h1>
-          <p className="mt-4 max-w-xl text-[16px] lg:text-[18px] leading-relaxed text-white/95 font-medium">
+          </motion.h1>
+          <motion.p
+            className="mt-4 max-w-xl text-[15px] lg:text-[18px] leading-relaxed text-white/90 font-medium"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
+          >
             Lets connect and start a conversation. We look forward to hearing from you.
-          </p>
+          </motion.p>
         </div>
       </section>
 
@@ -173,7 +186,7 @@ function Contact() {
         <div className="mt-16 mx-auto max-w-5xl grid gap-10 lg:grid-cols-[1.2fr_1fr] items-stretch">
 
           {/* ── Left: Contact Form ── */}
-          <div className="rounded-xl bg-white/70 p-10 shadow-sm h-full border border-white/40 flex flex-col">
+          <div className="rounded-xl bg-white/70 p-8 lg:p-10 shadow-sm h-full border border-white/40 flex flex-col">
             <h3 className="font-serif text-3xl lg:text-[2.5rem] text-primary mb-10 font-bold tracking-tight">
               Send a Direct Message
             </h3>
@@ -313,7 +326,7 @@ function Contact() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="inline-flex items-center gap-2.5 rounded-md bg-primary px-8 py-3.5 text-[15px] font-bold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="inline-flex items-center gap-2.5 rounded-md bg-primary px-8 py-3.5 text-[15px] font-bold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed max-lg:w-full max-lg:justify-center max-lg:py-4"
                 >
                   {isLoading ? (
                     <>

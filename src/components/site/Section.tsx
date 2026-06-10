@@ -14,7 +14,7 @@ export function Section({
   return (
     <motion.section
       id={id}
-      className={cn("w-full py-12 lg:py-16", className)}
+      className={cn("w-full py-24 lg:py-28", className)}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}

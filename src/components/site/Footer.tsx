@@ -20,18 +20,19 @@ const cols: { label: string; href: string }[][] = [
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
+      {/* Extra bottom padding on mobile so sticky CTA bar doesn't overlap */}
+      <div className="mx-auto max-w-7xl px-6 py-14 pb-32 lg:px-10 lg:pb-14">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
           {cols.map((col, i) => (
-            <ul key={i} className="space-y-4">
+            <ul key={i} className="space-y-5">
               {col.map(({ label, href }) => (
                 <li key={label}>
                   {href.startsWith("/") ? (
-                    <Link to={href} className="text-sm hover:opacity-80 transition-opacity">
+                    <Link to={href} className="text-[15px] lg:text-sm hover:opacity-80 transition-opacity py-1 inline-block">
                       {label}
                     </Link>
                   ) : (
-                    <a href={href} className="text-sm hover:opacity-80 transition-opacity">
+                    <a href={href} className="text-[15px] lg:text-sm hover:opacity-80 transition-opacity py-1 inline-block">
                       {label}
                     </a>
                   )}

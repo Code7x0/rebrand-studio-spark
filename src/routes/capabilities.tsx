@@ -3,6 +3,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Section } from "@/components/site/Section";
 import { CircleCheck, Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 import heroBg from "@/assets/our capabilites.png";
 import imgAgri1 from "@/assets/Sustainable farming.png";
@@ -52,22 +53,39 @@ function Capabilities() {
       <Header />
 
       {/* ── HERO ── */}
-      <section className="relative w-full overflow-hidden bg-black" style={{ height: "65vh", minHeight: "550px", maxHeight: "700px" }}>
-        {/* We use an inline image that dictates the height of the section natively, so it is never cropped. */}
-        <img
+      <section
+        className="relative max-lg:flex w-full overflow-hidden bg-black max-lg:min-h-[100svh] max-lg:flex-col max-lg:justify-end max-lg:pb-28"
+        style={{ height: "80vh", minHeight: "600px", maxHeight: "900px" }}
+      >
+        <motion.img
           src={heroBg}
           alt="Precision at Every Stage, From Soil to System"
           className="absolute inset-0 h-full w-full object-cover object-[center_0%] opacity-85 block"
+          initial={{ scale: 1.06 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.4, ease: "easeOut" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-        <div className="relative mx-auto flex h-full max-w-7xl flex-col justify-center px-6 lg:px-10">
+        <div className="absolute inset-0 lg:hidden bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+        
+        <div className="relative mx-auto flex w-full h-full min-h-[100svh] lg:min-h-0 max-w-7xl flex-col max-lg:justify-end max-lg:pb-28 lg:justify-center px-6 py-12 lg:px-10 lg:py-16">
           <div className="w-full">
-            <h1 className="max-w-3xl font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[4.5rem] leading-[1.1] text-white">
+            <motion.h1
+              className="max-w-3xl font-serif text-[2.1rem] leading-[1.05] text-white max-lg:max-w-[340px] sm:text-5xl lg:text-[4.5rem] lg:leading-[1.1]"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+            >
               Precision at Every Stage,<br />From Soil to System
-            </h1>
-            <p className="mt-4 md:mt-6 max-w-xl text-[14px] sm:text-[16px] lg:text-[18px] leading-relaxed text-white/95 font-medium">
+            </motion.h1>
+            <motion.p
+              className="mt-5 max-w-xl text-[15px] lg:text-[18px] leading-relaxed text-white/95 font-medium max-lg:max-w-[360px]"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, delay: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
+            >
               From seed to solution, our infrastructure delivers the quality, consistency, and reliability your formulations demand helping you scale with certainty and meet every market expectation.
-            </p>
+            </motion.p>
           </div>
         </div>
       </section>
