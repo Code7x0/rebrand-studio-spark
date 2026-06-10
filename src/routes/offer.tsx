@@ -12,10 +12,10 @@ import {
   Coffee
 } from "lucide-react";
 
-import heroBg from "@/assets/what we offer.png";
+import heroBg from "@/assets/what we offer.webp";
 import brochurePdf from "@/assets/brochure.pdf";
-import imgEssentialOils from "@/assets/Container.png";
-import imgBotanicalExtracts from "@/assets/Container (1).png";
+import imgEssentialOils from "@/assets/Container.webp";
+import imgBotanicalExtracts from "@/assets/Container (1).webp";
 import imgCustom1 from "@/assets/offer-custom-1.png";
 import imgCustom2 from "@/assets/offer-custom-2.png";
 

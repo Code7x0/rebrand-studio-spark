@@ -5,7 +5,7 @@ import { Footer } from "@/components/site/Footer";
 import { Section } from "@/components/site/Section";
 
 // Hero
-import heroBg from "@/assets/Home page first image 1.png";
+import heroBg from "@/assets/Home page first image 1.webp";
 
 // Process step images
 import stepFarm from "@/assets/1st image png au 1.png";
@@ -15,7 +15,7 @@ import stepDelivery from "@/assets/4th image png au 1.png";
 import arrowImg from "@/assets/arrow png 1.png";
 
 // Science section
-import labImg from "@/assets/dsdsds 1.png";
+import labImg from "@/assets/dsdsds 1.webp";
 
 // Partnership & Sustainability
 import handshakeImg from "@/assets/2nd image png au 2.png";

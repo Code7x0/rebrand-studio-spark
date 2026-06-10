@@ -8,7 +8,7 @@ import { LocationMap } from "@/components/site/LocationMap";
 import { MapPin, Phone, Loader2, CheckCircle2, AlertCircle, X } from "lucide-react";
 import { submitContactForm, type SubmitResult } from "@/lib/contact-server-fn";
 
-import heroBg from "@/assets/contact us.png";
+import heroBg from "@/assets/contact us.webp";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

@@ -11,11 +11,11 @@ import offerCustomSolutions from "@/assets/offer-custom-solutions.png";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Section } from "@/components/site/Section";
-import heroImg from "@/assets/hero.png";
+import heroImg from "@/assets/hero.webp";
 import brochurePdf from "@/assets/brochure.pdf";
-import whoImg from "@/assets/who-we-are.png";
-import gcmsImg from "@/assets/gcms.png";
-import industriesImg from "@/assets/industries.png";
+import whoImg from "@/assets/who-we-are.webp";
+import gcmsImg from "@/assets/gcms.webp";
+import industriesImg from "@/assets/industries.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({

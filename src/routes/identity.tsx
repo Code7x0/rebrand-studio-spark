@@ -4,10 +4,10 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Section } from "@/components/site/Section";
 
-import heroBg from "@/assets/our_destiny.png";
-import imgReliability from "@/assets/Rectangle 27.png";
-import imgSystems from "@/assets/Rectangle 35.png";
-import imgSourcing from "@/assets/Rectangle 36.png";
+import heroBg from "@/assets/our_destiny.webp";
+import imgReliability from "@/assets/Rectangle 27.webp";
+import imgSystems from "@/assets/Rectangle 35.webp";
+import imgSourcing from "@/assets/Rectangle 36.webp";
 
 export const Route = createFileRoute("/identity")({
   head: () => ({

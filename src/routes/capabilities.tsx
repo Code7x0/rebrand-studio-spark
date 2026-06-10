@@ -5,11 +5,11 @@ import { Section } from "@/components/site/Section";
 import { CircleCheck, Check } from "lucide-react";
 import { motion } from "framer-motion";
 
-import heroBg from "@/assets/our capabilites.png";
+import heroBg from "@/assets/our capabilites.webp";
 import imgAgri1 from "@/assets/Sustainable farming.png";
 import imgAgri2 from "@/assets/Indian agricultural land.png";
 import imgManufacturing from "@/assets/Img - Industrial manufacturing_margin.png";
-import imgTesting from "@/assets/99.png";
+import imgTesting from "@/assets/99.webp";
 
 export const Route = createFileRoute("/capabilities")({
   head: () => ({
