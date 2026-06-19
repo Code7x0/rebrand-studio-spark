@@ -6,7 +6,7 @@ import { Section } from "@/components/site/Section";
 
 import heroBg from "@/assets/our_destiny.webp";
 import imgReliability from "@/assets/Rectangle 27.webp";
-import imgSystems from "@/assets/Rectangle 35.webp";
+import imgSystems from "@/assets/quality-lab-cropped.jpg";
 import imgSourcing from "@/assets/Rectangle 36.webp";
 
 export const Route = createFileRoute("/identity")({

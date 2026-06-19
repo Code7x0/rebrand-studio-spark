@@ -11,10 +11,10 @@ import offerCustomSolutions from "@/assets/offer-custom-solutions.png";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Section } from "@/components/site/Section";
-import heroImg from "@/assets/hero.webp";
+import heroImg from "@/assets/hero-new.jpg";
 import brochurePdf from "@/assets/brochure.pdf";
 import whoImg from "@/assets/who-we-are.webp";
-import gcmsImg from "@/assets/gcms.webp";
+import gcmsImg from "@/assets/new-gcms.jpg";
 import industriesImg from "@/assets/industries.webp";
 
 export const Route = createFileRoute("/")({
@@ -125,15 +125,13 @@ function Home() {
         className="relative max-lg:flex w-full overflow-hidden bg-background max-lg:min-h-[100svh] max-lg:flex-col max-lg:justify-end max-lg:pb-28"
         style={{ height: "80vh", minHeight: "600px", maxHeight: "900px" }}
       >
-        {/* Slow luxury zoom — 20s to scale to 1.08, GPU-accelerated */}
-        <motion.img
+        <img
           src={heroImg}
-          alt="Essential oil dropper over botanicals"
-          className="absolute inset-0 h-full w-full object-cover object-[center_40%]"
-          initial={{ scale: 1 }}
-          animate={{ scale: 1.08 }}
-          transition={{ duration: 20, ease: "linear" }}
+          alt="Essential oils botanical extraction"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
+        {/* Premium darkness overlay */}
+        <div className="absolute inset-0 bg-black/10" />
         {/* Left-to-right gradient for desktop legibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/10" />
         {/* Bottom-up gradient — cinematic depth for all sizes */}
@@ -255,8 +253,8 @@ function Home() {
           Mobile: simplified premium stat chips (no gear icon)
           Desktop: original 2-col layout with gear icon unchanged
       */}
-      <section id="products" className="bg-primary text-primary-foreground py-16 px-6 lg:py-20">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
+      <section id="products" className="bg-primary text-primary-foreground">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-28">
           {/* DESKTOP LAYOUT (hidden on mobile) */}
           <div className="hidden lg:grid gap-12 lg:grid-cols-2">
             <div>
@@ -347,16 +345,16 @@ function Home() {
       </section>
 
       {/* ── GCMS TESTING ──
-          Mobile: image first full-bleed, then text
+          Mobile: natural image height, then text
           Desktop: original side-by-side
       */}
       <Section className="bg-[color:var(--cream)]">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
           <motion.div
-            className="overflow-hidden rounded-none shadow-sm max-lg:aspect-[16/10] group"
+            className="overflow-hidden rounded-none shadow-sm group"
             {...fadeUp}
           >
-            <img src={gcmsImg} alt="Lab testing" className="h-full w-full object-cover rounded-none transition-transform duration-700 group-hover:scale-105" />
+            <img src={gcmsImg} alt="Lab testing" className="w-full h-auto lg:h-full lg:w-full lg:object-cover rounded-none transition-transform duration-700 group-hover:scale-105" />
           </motion.div>
           <div className="pl-0 lg:pl-8">
             <motion.div {...fadeUp}>
