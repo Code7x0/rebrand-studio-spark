@@ -32,6 +32,9 @@ export const Route = createFileRoute("/")({
         content:
           "India's leading high-grade essential oils and botanical extracts supplier.",
       },
+      { property: "og:image", content: "/logo.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/logo.png" },
     ],
   }),
   component: Home,
