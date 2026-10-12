@@ -37,38 +37,38 @@ export function Header() {
             : "bg-background border-border/40"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-10 lg:py-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2.5 lg:px-10 lg:py-3.5">
 
           {/* Logo + two-line brand name */}
-          <Link to="/" className="flex items-center gap-2.5 lg:gap-3" onClick={() => setOpen(false)}>
+          <Link to="/" className="flex items-center gap-3 lg:gap-4 shrink-0" onClick={() => setOpen(false)}>
             <img
               src={logo}
               alt="Laxmi Essential Oil Oleoresins and Fragrance"
-              className="h-12 w-12 lg:h-14 lg:w-14 object-contain transition-transform duration-300 hover:scale-105 shrink-0"
+              className="h-14 w-14 sm:h-16 sm:w-16 lg:h-20 lg:w-20 object-contain transition-transform duration-300 hover:scale-105 shrink-0"
             />
             <div className="flex flex-col leading-snug">
-              <span className="font-serif font-semibold text-foreground text-[14px] sm:text-[15px] lg:text-[17px]">
+              <span className="font-['Cinzel',serif] font-bold text-foreground text-[20px] sm:text-[23px] lg:text-[28px] tracking-[0.03em] leading-none">
                 Laxmi Essential Oil
               </span>
-              <span className="font-sans text-[7.5px] sm:text-[9px] lg:text-[10px] font-bold tracking-[0.1em] lg:tracking-[0.12em] text-foreground/45 mt-0.5 max-w-[120px] sm:max-w-none">
+              <span className="font-['Outfit',sans-serif] text-[9.5px] sm:text-[11px] lg:text-[12.5px] font-bold tracking-[0.18em] lg:tracking-[0.24em] text-foreground/60 mt-1 uppercase whitespace-nowrap">
                 OLEORESINS AND FRAGRANCE
               </span>
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav className="hidden items-center gap-5 lg:gap-8 md:flex shrink-0">
             {navLinks.map(({ to, label }) => (
               <Link
                 key={to}
                 to={to}
-                className="relative text-[14px] font-medium text-foreground/75 transition-colors duration-200 hover:text-primary [&.active]:text-primary [&.active]:font-semibold after:content-[''] after:absolute after:-bottom-0.5 after:left-0 after:h-[1.5px] after:w-0 after:bg-primary after:transition-[width] after:duration-300 after:ease-out hover:after:w-full [&.active]:after:w-full"
+                className="relative text-[15px] lg:text-[16.5px] font-medium text-foreground/85 whitespace-nowrap transition-colors duration-200 hover:text-primary [&.active]:text-primary [&.active]:font-semibold after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-[width] after:duration-300 after:ease-out hover:after:w-full [&.active]:after:w-full"
               >
                 {label}
               </Link>
             ))}
             <Link
               to="/contact"
-              className="rounded-full bg-primary px-5 py-2 text-[13px] font-semibold text-primary-foreground transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 hover:shadow-[0_6px_24px_rgba(0,74,39,0.35)] [&.active]:opacity-90"
+              className="rounded-full bg-primary px-6 py-2.5 lg:px-7 lg:py-3 text-[15px] lg:text-[16px] font-semibold text-primary-foreground whitespace-nowrap transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 hover:shadow-[0_6px_24px_rgba(0,74,39,0.35)] [&.active]:opacity-90"
             >
               Contact Us
             </Link>
@@ -76,11 +76,11 @@ export function Header() {
 
           {/* Mobile hamburger */}
           <button
-            className="flex items-center justify-center md:hidden p-1.5 -mr-1.5 rounded-md text-foreground hover:bg-black/5 transition-colors"
+            className="flex items-center justify-center md:hidden p-2 -mr-2 rounded-lg text-foreground hover:bg-black/5 transition-colors"
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {open ? <X className="h-6 w-6 sm:h-7 sm:w-7" /> : <Menu className="h-6 w-6 sm:h-7 sm:w-7" />}
           </button>
         </div>
       </header>
@@ -97,27 +97,27 @@ export function Header() {
           >
             {/* Top bar with full name */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
-              <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+              <Link to="/" className="flex items-center gap-3.5" onClick={() => setOpen(false)}>
                 <img
                   src={logo}
                   alt="Laxmi Essential Oil Oleoresins and Fragrance"
-                  className="h-14 w-14 object-contain brightness-0 invert shrink-0"
+                  className="h-16 w-16 object-contain brightness-0 invert shrink-0"
                 />
                 <div className="flex flex-col leading-snug">
-                  <span className="font-serif text-[15px] sm:text-[16px] font-semibold text-white">
+                  <span className="font-['Cinzel',serif] text-[20px] sm:text-[22px] font-bold text-white tracking-[0.03em] leading-tight">
                     Laxmi Essential Oil
                   </span>
-                  <span className="font-sans text-[8px] sm:text-[10px] font-bold tracking-[0.08em] text-white/50 mt-0.5 max-w-[130px] sm:max-w-none">
+                  <span className="font-['Outfit',sans-serif] text-[10px] sm:text-[11.5px] font-bold tracking-[0.18em] text-white/70 mt-1 uppercase whitespace-nowrap">
                     OLEORESINS AND FRAGRANCE
                   </span>
                 </div>
               </Link>
               <button
-                className="flex items-center justify-center p-2 -mr-2 rounded-md text-white/70 hover:text-white transition-colors"
+                className="flex items-center justify-center p-2 -mr-2 rounded-lg text-white/70 hover:text-white transition-colors"
                 aria-label="Close menu"
                 onClick={() => setOpen(false)}
               >
-                <X className="h-6 w-6" />
+                <X className="h-7 w-7" />
               </button>
             </div>
 
